@@ -1,0 +1,28 @@
+C:\Users\DEVLKOMP\Downloads\smsApp\SMSapplication\SMSapplication\bin\Debug\SMSapplication.exe
+C:\Users\DEVLKOMP\Downloads\smsApp\SMSapplication\SMSapplication\bin\Debug\SMSapplication.pdb
+C:\Users\DEVLKOMP\Downloads\smsApp\SMSapplication\SMSapplication\obj\Debug\SMSapplication.csprojResolveAssemblyReference.cache
+C:\Users\DEVLKOMP\Downloads\smsApp\SMSapplication\SMSapplication\obj\Debug\SMSapplication.SMSapplication.resources
+C:\Users\DEVLKOMP\Downloads\smsApp\SMSapplication\SMSapplication\obj\Debug\SMSapplication.Properties.Resources.resources
+C:\Users\DEVLKOMP\Downloads\smsApp\SMSapplication\SMSapplication\obj\Debug\SMSapplication.csproj.GenerateResource.Cache
+C:\Users\DEVLKOMP\Downloads\smsApp\SMSapplication\SMSapplication\obj\Debug\SMSapplication.exe
+C:\Users\DEVLKOMP\Downloads\smsApp\SMSapplication\SMSapplication\obj\Debug\SMSapplication.pdb
+C:\Users\DEVLKOMP\Downloads\smsApp\SMSapplication\SMSapplication\bin\Debug\SMSapplication.exe.config
+E:\Disk D ucell0001-la\docs\smsApp\smsApp\SMSapplication\SMSapplication\bin\Debug\SMSapplication.exe.config
+E:\Disk D ucell0001-la\docs\smsApp\smsApp\SMSapplication\SMSapplication\obj\Debug\SMSapplication.exe
+E:\Disk D ucell0001-la\docs\smsApp\smsApp\SMSapplication\SMSapplication\obj\Debug\SMSapplication.pdb
+E:\Disk D ucell0001-la\docs\smsApp\smsApp\SMSapplication\SMSapplication\obj\Debug\SMSapplication.csprojResolveAssemblyReference.cache
+E:\Disk D ucell0001-la\docs\smsApp\smsApp\SMSapplication\SMSapplication\obj\Debug\SMSapplication.SMSapplication.resources
+E:\Disk D ucell0001-la\docs\smsApp\smsApp\SMSapplication\SMSapplication\obj\Debug\SMSapplication.Properties.Resources.resources
+E:\Disk D ucell0001-la\docs\smsApp\smsApp\SMSapplication\SMSapplication\obj\Debug\SMSapplication.csproj.GenerateResource.Cache
+E:\Disk D ucell0001-la\docs\smsApp\smsApp\SMSapplication\SMSapplication\bin\Debug\SMSapplication.exe
+E:\Disk D ucell0001-la\docs\smsApp\smsApp\SMSapplication\SMSapplication\bin\Debug\SMSapplication.pdb
+H:\docs\SMSapplication\SMSapplication\bin\Debug\SMSapplication.exe.config
+H:\docs\SMSapplication\SMSapplication\obj\Debug\SMSapplication.exe
+H:\docs\SMSapplication\SMSapplication\obj\Debug\SMSapplication.pdb
+H:\docs\SMSapplication\SMSapplication\obj\Debug\SMSapplication.csprojResolveAssemblyReference.cache
+H:\docs\SMSapplication\SMSapplication\obj\Debug\SMSapplication.SMSapplication.resources
+H:\docs\SMSapplication\SMSapplication\obj\Debug\SMSapplication.Properties.Resources.resources
+H:\docs\SMSapplication\SMSapplication\obj\Debug\SMSapplication.csproj.GenerateResource.Cache
+H:\docs\SMSapplication\SMSapplication\bin\Debug\SMSapplication.exe
+H:\docs\SMSapplication\SMSapplication\bin\Debug\SMSapplication.pdb
+H:\docs\SMSapplication\SMSapplication\bin\Debug\localDB.mdb

@@ -1,0 +1,36 @@
+H:\docs\SMSapplication\SMSapplication\bin\x86\Debug\SMSapplication.exe.config
+H:\docs\SMSapplication\SMSapplication\bin\x86\Debug\SMSapplication.exe
+H:\docs\SMSapplication\SMSapplication\bin\x86\Debug\SMSapplication.pdb
+H:\docs\SMSapplication\SMSapplication\obj\x86\Debug\SMSapplication.SMSapplication.resources
+H:\docs\SMSapplication\SMSapplication\obj\x86\Debug\SMSapplication.Properties.Resources.resources
+H:\docs\SMSapplication\SMSapplication\obj\x86\Debug\SMSapplication.csproj.GenerateResource.Cache
+H:\docs\SMSapplication\SMSapplication\obj\x86\Debug\SMSapplication.exe
+H:\docs\SMSapplication\SMSapplication\obj\x86\Debug\SMSapplication.pdb
+H:\docs\SMSapplication\SMSapplication\bin\x86\Debug\MaskedCell.dll
+H:\docs\SMSapplication\SMSapplication\bin\x86\Debug\MaskedCell.pdb
+I:\docs\SMSapplication\SMSapplication\bin\x86\Debug\SMSapplication.exe.config
+I:\docs\SMSapplication\SMSapplication\obj\x86\Debug\SMSapplication.exe
+I:\docs\SMSapplication\SMSapplication\obj\x86\Debug\SMSapplication.pdb
+I:\docs\SMSapplication\SMSapplication\bin\x86\Debug\SMSapplication.exe
+I:\docs\SMSapplication\SMSapplication\bin\x86\Debug\SMSapplication.pdb
+I:\docs\SMSapplication\SMSapplication\obj\x86\Debug\SMSapplication.csprojResolveAssemblyReference.cache
+I:\docs\SMSapplication\SMSapplication\obj\x86\Debug\SMSapplication.BeginForm.resources
+I:\docs\SMSapplication\SMSapplication\obj\x86\Debug\SMSapplication.SMSapplication.resources
+I:\docs\SMSapplication\SMSapplication\obj\x86\Debug\SMSapplication.Properties.Resources.resources
+I:\docs\SMSapplication\SMSapplication\obj\x86\Debug\SMSapplication.csproj.GenerateResource.Cache
+H:\docs\SMSapplication\SMSapplication\obj\x86\Debug\SMSapplication.SearchForm.resources
+C:\Users\umidjon.vakhidov\Desktop\SMSapplication\SMSapplication\bin\x86\Debug\SMSapplication.exe.config
+C:\Users\umidjon.vakhidov\Desktop\SMSapplication\SMSapplication\obj\x86\Debug\SMSapplication.exe
+C:\Users\umidjon.vakhidov\Desktop\SMSapplication\SMSapplication\obj\x86\Debug\SMSapplication.pdb
+C:\Users\umidjon.vakhidov\Desktop\SMSapplication\SMSapplication\bin\x86\Debug\SMSapplication.exe
+C:\Users\umidjon.vakhidov\Desktop\SMSapplication\SMSapplication\bin\x86\Debug\SMSapplication.pdb
+C:\Users\umidjon.vakhidov\Desktop\SMSapplication\SMSapplication\bin\x86\Debug\MaskedCell.dll
+C:\Users\umidjon.vakhidov\Desktop\SMSapplication\SMSapplication\bin\x86\Debug\MaskedCell.pdb
+C:\Users\umidjon.vakhidov\Desktop\SMSapplication\SMSapplication\obj\x86\Debug\SMSapplication.SearchForm.resources
+C:\Users\umidjon.vakhidov\Desktop\SMSapplication\SMSapplication\obj\x86\Debug\SMSapplication.SMSapplication.resources
+C:\Users\umidjon.vakhidov\Desktop\SMSapplication\SMSapplication\obj\x86\Debug\SMSapplication.Properties.Resources.resources
+C:\Users\umidjon.vakhidov\Desktop\SMSapplication\SMSapplication\obj\x86\Debug\SMSapplication.csproj.GenerateResource.Cache
+C:\Users\umidjon.vakhidov\Desktop\SMSapplication\SMSapplication\obj\x86\Debug\SMSapplication.csprojResolveAssemblyReference.cache
+G:\UCELL0001-la\docs\sms sender\SMSapplication\SMSapplication\bin\x86\Debug\SMSapplication.exe.config
+G:\UCELL0001-la\docs\sms sender\SMSapplication\SMSapplication\obj\x86\Debug\SMSapplication.exe
+G:\UCELL0001-la\docs\sms sender\SMSapplication\SMSapplication\obj\x86\Debug\SMSapplication.pdb

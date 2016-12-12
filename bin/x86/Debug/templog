@@ -1,0 +1,7 @@
+﻿error:Message-Строка 'I:\docs\SMSapplication\22-01-2015_08-06-56\contrdb (1).mdb' задает ошибочный путь.  Проверьте, что путь задан правильно и имеется подключение к серверу, на котором находятся файлы.
+error:Message-Дата содержит синтаксическую ошибку в выражении запроса '( CDate(Format(EvDate, "Short Date")+" "+Format(EvTime, "Long Time"))>=#04.02.2015 10:55:17#)'.
+error:Message-Дата содержит синтаксическую ошибку в выражении запроса '( CDate(Format(EvDate, "Short Date")+" "+Format(EvTime, "Long Time"))>=#04.02.2015 10:55:17#)'.
+error:Message-Ошибка синтаксиса (пропущен оператор) в выражении запроса '( CDate(Format(EvDate, "Short Date")+" "+Format(EvTime, "Long Time"))>=CDate(04.02.2015 10:55:17))'.
+error:Message-Дата содержит синтаксическую ошибку в выражении запроса '( CDate(Format(EvDate, "Short Date")+" "+Format(EvTime, "Long Time"))>=#04.02.2015 10:55:17#)'.
+error:Message-Дата содержит синтаксическую ошибку в выражении запроса '( CDate(Format(EvDate, "Short Date")+" "+Format(EvTime, "Long Time"))>=#04.02.2015 10:55:17#)'.
+Response received is incomplete. Failed to send message

@@ -1,0 +1,12 @@
+H:\docs\SMSapplication\SMSapplication\bin\x86\Release\SMSapplication.exe.config
+H:\docs\SMSapplication\SMSapplication\bin\x86\Release\SMSapplication.exe
+H:\docs\SMSapplication\SMSapplication\bin\x86\Release\SMSapplication.pdb
+H:\docs\SMSapplication\SMSapplication\bin\x86\Release\MaskedCell.dll
+H:\docs\SMSapplication\SMSapplication\bin\x86\Release\MaskedCell.pdb
+H:\docs\SMSapplication\SMSapplication\obj\x86\Release\SMSapplication.csprojResolveAssemblyReference.cache
+H:\docs\SMSapplication\SMSapplication\obj\x86\Release\SMSapplication.BeginForm.resources
+H:\docs\SMSapplication\SMSapplication\obj\x86\Release\SMSapplication.SMSapplication.resources
+H:\docs\SMSapplication\SMSapplication\obj\x86\Release\SMSapplication.Properties.Resources.resources
+H:\docs\SMSapplication\SMSapplication\obj\x86\Release\SMSapplication.csproj.GenerateResource.Cache
+H:\docs\SMSapplication\SMSapplication\obj\x86\Release\SMSapplication.exe
+H:\docs\SMSapplication\SMSapplication\obj\x86\Release\SMSapplication.pdb

@@ -1,0 +1,29 @@
+01.06.2014 8:47:18 ==> No data received from phone.
+01.06.2014 8:47:30 ==> No data received from phone.
+01.06.2014 8:47:47 ==> No data received from phone.
+01.06.2014 8:48:26 ==> No data received from phone.
+01.06.2014 8:50:00 ==> No data received from phone.
+01.06.2014 8:50:57 ==> Response received is incomplete.
+01.06.2014 8:51:40 ==> Response received is incomplete.
+01.06.2014 8:52:09 ==> Response received is incomplete.
+01.06.2014 15:16:24 ==> Response received is incomplete.
+01.06.2014 15:16:28 ==> Response received is incomplete.
+01.06.2014 15:23:16 ==> Response received is incomplete.
+01.06.2014 15:23:20 ==> Response received is incomplete.
+01.06.2014 15:23:26 ==> Response received is incomplete.
+01.06.2014 15:23:27 ==> No data received from phone.
+01.06.2014 15:38:45 ==> Unable to connect to any of the specified MySQL hosts.
+01.06.2014 15:39:21 ==> Unable to connect to any of the specified MySQL hosts.
+01.06.2014 15:40:48 ==> Unable to connect to any of the specified MySQL hosts.
+01.06.2014 15:40:52 ==> Unable to connect to any of the specified MySQL hosts.
+01.06.2014 15:42:22 ==> Unable to connect to any of the specified MySQL hosts.
+01.06.2014 15:42:25 ==> Unable to connect to any of the specified MySQL hosts.
+01.06.2014 15:44:14 ==> Unable to connect to any of the specified MySQL hosts.
+01.06.2014 15:44:18 ==> Unable to connect to any of the specified MySQL hosts.
+01.06.2014 15:44:33 ==> Unable to connect to any of the specified MySQL hosts.
+01.06.2014 15:44:48 ==> Unable to connect to any of the specified MySQL hosts.
+01.06.2014 15:45:03 ==> Unable to connect to any of the specified MySQL hosts.
+01.06.2014 15:45:19 ==> Unable to connect to any of the specified MySQL hosts.
+01.06.2014 15:45:34 ==> Unable to connect to any of the specified MySQL hosts.
+01.06.2014 15:45:49 ==> Unable to connect to any of the specified MySQL hosts.
+01.06.2014 15:46:43 ==> Unable to connect to any of the specified MySQL hosts.

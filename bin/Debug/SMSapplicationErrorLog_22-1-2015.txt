@@ -1,0 +1,15 @@
+22.01.2015 8:39:59 ==> Порт 'COM1' не существует.
+22.01.2015 8:42:39 ==> Порт 'COM1' не существует.
+22.01.2015 9:10:03 ==> Порт 'COM1' не существует.
+22.01.2015 9:10:19 ==> No data received from phone.
+22.01.2015 9:10:29 ==> No data received from phone.
+22.01.2015 9:11:43 ==> Порт 'COM1' не существует.
+22.01.2015 9:11:58 ==> No data received from phone.
+22.01.2015 9:58:34 ==> No data received from phone.
+22.01.2015 9:58:43 ==> No data received from phone.
+22.01.2015 10:05:48 ==> No data received from phone. No phone connected
+22.01.2015 21:01:44 ==> No success message was received.
+22.01.2015 22:28:54 ==> No data received from phone. No phone connected
+22.01.2015 23:17:45 ==> No success message was received.
+22.01.2015 23:19:01 ==> No success message was received.
+22.01.2015 23:24:59 ==> No data received from phone. No phone connected
