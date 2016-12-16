@@ -154,7 +154,279 @@ namespace SMSapplication.Classes
             }
             da.Fill(events_tbl);
         }
+        #region work with DB SMS for school
+        //void worker_DoWork(object sender, DoWorkEventArgs e)
+        //{
+        //    worked = true;
+        //    Form f = this.dgv.FindForm();
+        //    timer.Interval = intervalCheckErr * 60 * 1000;
+        //    timer.Enabled = true;
+        //    //if(!th.IsAlive)th.Start();
+        //    timer.Start();
+        //    Dictionary<string, object> curargument = e.Argument as Dictionary<string, object>;
+        //    if (curargument != null && objectSMS != null)
+        //    {
+        //        //get params
+        //        localDBDataSet.ClientsDataTable clientTable = (localDBDataSet.ClientsDataTable)curargument["clientTable"];
+        //        localDBDataSet.EeventLogDataTable eventTable = (localDBDataSet.EeventLogDataTable)curargument["eventTable"];
+        //        DateTime startTime = (DateTime)curargument["startTime"];
+        //        string dbfile = (string)curargument["dbfile"];
+        //        string organization = (string)curargument["organization"];
+        //        string proxod = (string)curargument["otmetka_proxod"];
+        //        ClientsData clientdata = new ClientsData();
+        //        clientdata.OtmetkaProxod = proxod;
+        //        DateTime curDate = DateTime.Now.AddHours(-HoursPrevEvents);
+        //        if (DateTime.Now.Month >= 6 && DateTime.Now.Day >= 31)
+        //        {
+        //            MessageBox.Show("Истек период использования ПО!");
+        //            return;
+        //        }
 
+        //        if (beginDate > curDate)
+        //        { clientdata.selectDate = beginDate.ToString(); }
+        //        else
+        //        {
+        //            clientdata.selectDate = curDate.ToString();
+        //            beginDate = curDate;
+        //        }
+        //        beginDate = beginDate.AddSeconds(this.interval);
+        //        Dictionary<string, bool> sendlist = new Dictionary<string, bool>();
+        //        if (clientdata.ConnectingBase(dbfile))
+        //        {
+        //            try
+        //            {
+        //                while (!IsExit)
+        //                {
+        //                    //Check the error events and send again
+        //                    if (checkErrors)
+        //                        CheckErrors(eventTable);
+
+
+        //                    if (clientdata.SyncroniseTables("eventlog"))
+        //                    {
+        //                        localDBDataSet.EeventLogRow eventRow;
+        //                        Dictionary<string, string> mess_parts;
+        //                        bool eventSend = false;
+        //                        DataRow[] availableRows = clientdata.ds.Tables["eventlog"].Select("(EventTime>'" + beginDate.AddSeconds((-interval)).ToString() + "' and EventTime<'" + beginDate.ToString() + "' )");
+        //                        for (int i = 0; i < availableRows.Length; i++) //(System.Data.DataRow row in clientdata.ds.Tables["eventlog"].Rows)
+        //                        {
+        //                            int bdgnum = (int)availableRows[i]["ClBdg"];
+        //                            DataRow[] eventRows = clientdata.ds.Tables["eventlog"].Select("ClBdg=" + bdgnum + " and (EventTime>'" + beginDate.AddSeconds((-interval)).ToString() + "' and EventTime<'" + beginDate.ToString() + "' )");
+
+
+        //                            string cur_message = "";
+        //                            string cur_event = "";
+        //                            for (int j = 0; j < eventRows.Length; j++)
+        //                            {
+        //                                System.Data.DataRow rowEvent = eventRows[j];
+
+        //                                //System.Data.DataRow rowEvent = clientdata.ds.Tables["eventlog"].Rows[i];
+        //                                if (!sendlist.ContainsKey(rowEvent["IDNum"].ToString()) || sendlist[rowEvent["IDNum"].ToString()] == false)
+        //                                {
+        //                                    if (!sendlist.ContainsKey(rowEvent["IDNum"].ToString()))
+        //                                    {
+        //                                        sendlist.Add(rowEvent["IDNum"].ToString(), false);
+        //                                    }
+        //                                    //
+        //                                    DataRow[] srowClient = clientTable.Select("(BdgNum=" + rowEvent["ClBdg"] + " and PhoneNumber Is not Null) and IsSend='true'");
+        //                                    if (srowClient.Length > 0)
+        //                                    {
+        //                                        mess_parts = this.MessageParts(rowEvent, srowClient[0]);
+
+        //                                        if (!eventSend)
+        //                                        {
+        //                                            string check_sms_str = organization + "\r\n" + (string)srowClient[0]["ClientName"] + "-" + DateTime.Parse(mess_parts["EventTime"]).ToShortDateString() + "\r\n" + cur_message + mess_parts["Event"] + "-" + DateTime.Parse(mess_parts["EventTime"]).ToLongTimeString();
+        //                                            if (check_sms_str.Length < 160)
+        //                                            {
+        //                                                cur_message += mess_parts["Event"] + "-" + DateTime.Parse(mess_parts["EventTime"]).ToLongTimeString() + "\r\n";
+        //                                                cur_event += (string)rowEvent["Event"] + "\r\n";
+        //                                                sendlist[rowEvent["IDNum"].ToString()] = true;
+        //                                                if ((j + 1) == eventRows.Length)
+        //                                                {
+        //                                                    sendlist[rowEvent["IDNum"].ToString()] = true;
+        //                                                    eventSend = true;
+        //                                                }
+
+        //                                            }
+        //                                            else
+        //                                            {
+        //                                                eventSend = true;
+        //                                                sendlist[rowEvent["IDNum"].ToString()] = false;
+        //                                                j--;
+        //                                            }
+
+        //                                        }
+        //                                        if (eventSend)
+        //                                        {
+        //                                            eventSend = false;
+        //                                            eventRow = eventTable.NewEeventLogRow();
+        //                                            eventRow.ClBdg = (int)rowEvent["ClBdg"];
+        //                                            eventRow.ClientName = mess_parts["ClientName"];
+        //                                            eventRow.PhoneNumber = mess_parts["PhoneNumber"];
+        //                                            eventRow.EventTime = DateTime.Now;
+        //                                            eventRow.EventText = organization + "\r\n" + (string)srowClient[0]["ClientName"] + " " + DateTime.Parse(mess_parts["EventTime"]).ToShortDateString() + "\r\n" + cur_message;
+        //                                            eventRow.EventType = cur_event;
+        //                                            eventRow.Status = "Отправляется";
+
+        //                                            eventTable.AddEeventLogRow(eventRow);
+
+        //                                            //f.Invoke(new UpdateDgv(UpdateDatagridview), new object[] { eventRow });
+
+
+        //                                            bool sended = this.SendSMS(mess_parts["PhoneNumber"], Transliteration.Transliteration.Front(eventRow.EventText));//organization + "\r\n" + mess_parts["ClientName"] + " " + mess_parts["Event"] + " v " + mess_parts["EventTime"])); //+ " " + mess_parts["EventTime"] + " " + mess_parts["Zone"]);
+
+
+        //                                            //int randomInt = err.Next(1000);
+        //                                            //if (randomInt % 2 == 1)
+        //                                            //{ eventRow.Status = "Отправлено"; }
+        //                                            //else
+        //                                            //{ eventRow.Status = "Ошибка"; }
+        //                                            if (sended)
+        //                                            {
+        //                                                eventRow.Status = "Отправлено";
+
+
+
+        //                                            }
+        //                                            else
+        //                                            {
+        //                                                eventRow.Status = "Ошибка";
+
+
+        //                                            }
+
+        //                                            //f.Invoke(new UpdateDgv(UpdateDatagridview), new object[] { null });
+        //                                            da.Update(eventRow);
+
+
+        //                                            f.Invoke(new UpdateDgv(UpdateDatagridview), new object[] { eventRow });
+        //                                            cur_event = "";
+        //                                            cur_message = "";
+        //                                            da.Fill(eventTable);
+        //                                        }
+
+
+
+
+        //                                        /*// send of same rows part
+        //                                        ///
+        //                                        ///
+        //                                        if (rowEvent["BdgNum"].ToString() == clientdata.ds.Tables["eventlog"].Rows[i + 1]["BdgNum"].ToString())
+        //                                        {
+        //                                            if (!perekluchatel)
+        //                                            { beginIndex = i; perekluchatel = true; }
+
+                                                
+        //                                        }
+        //                                        else if(perekluchatel)
+        //                                        {
+        //                                            rowEvent = clientdata.ds.Tables["eventlog"].Rows[beginIndex];
+        //                                            mess_parts = this.MessageParts(rowEvent, srowClient[0]);
+        //                                            eventRow = eventTable.NewEeventLogRow();
+        //                                            eventRow.ClBdg =        (int)rowEvent["ClBdg"];
+        //                                            eventRow.ClientName =   mess_parts["ClientName"];
+        //                                            eventRow.PhoneNumber =  mess_parts["PhoneNumber"];
+        //                                            eventRow.EventTime =    DateTime.Now;
+        //                                            eventRow.EventText =    organization + "\r\n" + (string)srowClient[0]["ClientName"] + " " + DateTime.Parse(mess_parts["EventTime"]).ToShortDateString()+"\r\n";
+        //                                            eventRow.EventType = "";
+        //                                            eventRow.Status = "Отправляется";
+                                                
+                                                
+        //                                            for (; beginIndex <= i; beginIndex++)
+        //                                            {
+        //                                                rowEvent = clientdata.ds.Tables["eventlog"].Rows[beginIndex];
+        //                                                mess_parts = this.MessageParts(rowEvent, srowClient[0]);
+
+        //                                                eventRow.EventText +=  mess_parts["Event"]+"-"+DateTime.Parse(mess_parts["EventTime"]).ToLongTimeString();
+        //                                                eventRow.EventType += (string)rowEvent["Event"] + "\r\n";
+                                                      
+        //                                            }
+        //                                            eventTable.AddEeventLogRow(eventRow);
+        //                                            perekluchatel = false;
+        //                                        }
+        //                                        */
+        //                                        /// 
+        //                                        //mess_parts = this.MessageParts(rowEvent, srowClient[0]);
+        //                                        //sendlist.Add(rowEvent["IDNum"].ToString(), false);
+
+        //                                        //eventRow = eventTable.NewEeventLogRow();
+        //                                        //eventRow.ClBdg = (int)rowEvent["ClBdg"];
+        //                                        //eventRow.ClientName = mess_parts["ClientName"];
+        //                                        //eventRow.PhoneNumber = mess_parts["PhoneNumber"];
+        //                                        //eventRow.EventTime = DateTime.Now;
+        //                                        //eventRow.EventText = organization + "\r\n" + mess_parts["ClientName"] + " " + mess_parts["EventTime"] + " " + mess_parts["Event"];
+        //                                        //eventRow.EventType = mess_parts["Event"];
+        //                                        //eventRow.Status = "Отправляется";
+
+        //                                    }
+
+        //                                    //}
+        //                                    ///Send section
+        //                                    ///
+        //                                    ///
+
+        //                                }
+        //                            }
+
+
+
+
+        //                        }
+
+        //                        if (IsExit)
+        //                            break;
+        //                        if (beginDate > DateTime.Now.AddSeconds(-this.interval))
+        //                        {
+        //                            int j = 0;
+        //                            int sekund5 = this.interval / 5;
+        //                            while (!(sekund5 <= j))
+        //                            {
+        //                                if (IsExit)
+        //                                    break;
+        //                                Thread.Sleep(5000);
+        //                                j++;
+        //                            }
+        //                        }
+
+        //                        beginDate = beginDate.AddSeconds(this.interval);
+        //                        if (IsExit)
+        //                        { break; }
+        //                    }
+        //                    else
+        //                    {
+        //                        //MessageBox.Show(clientdata.errorMessage);
+        //                        this.SendSMS("error", clientdata.errorMessage);
+        //                    }
+        //                    //f = this.dgv.FindForm();
+        //                    //f.Invoke(new UpdateDgv(UpdateDatagridview));
+        //                    //del = new UpdateDgv(UpdateDatagridview);
+        //                    //del.Invoke();
+
+
+        //                }
+        //                //th.Abort();
+        //                timer.Stop();
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                this.SendSMS("error", ex.Message);
+        //            }
+
+        //        }
+        //        else
+        //        {
+        //            //MessageBox.Show(clientdata.errorMessage);
+        //            this.SendSMS("error", clientdata.errorMessage);
+        //        }
+        //        e.Result = eventTable;
+        //    }
+
+
+
+        //    //throw new NotImplementedException();
+        //}
+        
+        #endregion
         void worker_DoWork(object sender, DoWorkEventArgs e)
         {
             worked = true;
@@ -163,12 +435,12 @@ namespace SMSapplication.Classes
             timer.Enabled = true;
             //if(!th.IsAlive)th.Start();
             timer.Start();
-            Dictionary<string, object> curargument =  e.Argument as Dictionary<string, object>;
-            if(curargument!=null&&objectSMS != null)
+            Dictionary<string, object> curargument = e.Argument as Dictionary<string, object>;
+            if (curargument != null && objectSMS != null)
             {
                 //get params
                 localDBDataSet.ClientsDataTable clientTable = (localDBDataSet.ClientsDataTable)curargument["clientTable"];
-                localDBDataSet.EeventLogDataTable eventTable= (localDBDataSet.EeventLogDataTable)curargument["eventTable"];
+                localDBDataSet.EeventLogDataTable eventTable = (localDBDataSet.EeventLogDataTable)curargument["eventTable"];
                 DateTime startTime = (DateTime)curargument["startTime"];
                 string dbfile = (string)curargument["dbfile"];
                 string organization = (string)curargument["organization"];
@@ -181,10 +453,10 @@ namespace SMSapplication.Classes
                     MessageBox.Show("Истек период использования ПО!");
                     return;
                 }
-                
+
                 if (beginDate > curDate)
                 { clientdata.selectDate = beginDate.ToString(); }
-                else 
+                else
                 {
                     clientdata.selectDate = curDate.ToString();
                     beginDate = curDate;
@@ -276,11 +548,7 @@ namespace SMSapplication.Classes
                                                     bool sended = this.SendSMS(mess_parts["PhoneNumber"], Transliteration.Transliteration.Front(eventRow.EventText));//organization + "\r\n" + mess_parts["ClientName"] + " " + mess_parts["Event"] + " v " + mess_parts["EventTime"])); //+ " " + mess_parts["EventTime"] + " " + mess_parts["Zone"]);
 
 
-                                                    //int randomInt = err.Next(1000);
-                                                    //if (randomInt % 2 == 1)
-                                                    //{ eventRow.Status = "Отправлено"; }
-                                                    //else
-                                                    //{ eventRow.Status = "Ошибка"; }
+
                                                     if (sended)
                                                     {
                                                         eventRow.Status = "Отправлено";
@@ -297,8 +565,8 @@ namespace SMSapplication.Classes
 
                                                     //f.Invoke(new UpdateDgv(UpdateDatagridview), new object[] { null });
                                                     da.Update(eventRow);
-                                                    
-                                                    
+
+
                                                     f.Invoke(new UpdateDgv(UpdateDatagridview), new object[] { eventRow });
                                                     cur_event = "";
                                                     cur_message = "";
@@ -308,67 +576,14 @@ namespace SMSapplication.Classes
 
 
 
-                                                /*// send of same rows part
-                                                ///
-                                                ///
-                                                if (rowEvent["BdgNum"].ToString() == clientdata.ds.Tables["eventlog"].Rows[i + 1]["BdgNum"].ToString())
-                                                {
-                                                    if (!perekluchatel)
-                                                    { beginIndex = i; perekluchatel = true; }
-
-                                                
-                                                }
-                                                else if(perekluchatel)
-                                                {
-                                                    rowEvent = clientdata.ds.Tables["eventlog"].Rows[beginIndex];
-                                                    mess_parts = this.MessageParts(rowEvent, srowClient[0]);
-                                                    eventRow = eventTable.NewEeventLogRow();
-                                                    eventRow.ClBdg =        (int)rowEvent["ClBdg"];
-                                                    eventRow.ClientName =   mess_parts["ClientName"];
-                                                    eventRow.PhoneNumber =  mess_parts["PhoneNumber"];
-                                                    eventRow.EventTime =    DateTime.Now;
-                                                    eventRow.EventText =    organization + "\r\n" + (string)srowClient[0]["ClientName"] + " " + DateTime.Parse(mess_parts["EventTime"]).ToShortDateString()+"\r\n";
-                                                    eventRow.EventType = "";
-                                                    eventRow.Status = "Отправляется";
-                                                
-                                                
-                                                    for (; beginIndex <= i; beginIndex++)
-                                                    {
-                                                        rowEvent = clientdata.ds.Tables["eventlog"].Rows[beginIndex];
-                                                        mess_parts = this.MessageParts(rowEvent, srowClient[0]);
-
-                                                        eventRow.EventText +=  mess_parts["Event"]+"-"+DateTime.Parse(mess_parts["EventTime"]).ToLongTimeString();
-                                                        eventRow.EventType += (string)rowEvent["Event"] + "\r\n";
-                                                      
-                                                    }
-                                                    eventTable.AddEeventLogRow(eventRow);
-                                                    perekluchatel = false;
-                                                }
-                                                */
-                                                /// 
-                                                //mess_parts = this.MessageParts(rowEvent, srowClient[0]);
-                                                //sendlist.Add(rowEvent["IDNum"].ToString(), false);
-
-                                                //eventRow = eventTable.NewEeventLogRow();
-                                                //eventRow.ClBdg = (int)rowEvent["ClBdg"];
-                                                //eventRow.ClientName = mess_parts["ClientName"];
-                                                //eventRow.PhoneNumber = mess_parts["PhoneNumber"];
-                                                //eventRow.EventTime = DateTime.Now;
-                                                //eventRow.EventText = organization + "\r\n" + mess_parts["ClientName"] + " " + mess_parts["EventTime"] + " " + mess_parts["Event"];
-                                                //eventRow.EventType = mess_parts["Event"];
-                                                //eventRow.Status = "Отправляется";
 
                                             }
 
-                                            //}
-                                            ///Send section
-                                            ///
-                                            ///
 
                                         }
                                     }
 
-                                    
+
 
 
                                 }
@@ -387,10 +602,10 @@ namespace SMSapplication.Classes
                                         j++;
                                     }
                                 }
-                                
+
                                 beginDate = beginDate.AddSeconds(this.interval);
                                 if (IsExit)
-                                {  break; }
+                                { break; }
                             }
                             else
                             {
@@ -406,22 +621,23 @@ namespace SMSapplication.Classes
                         }
                         //th.Abort();
                         timer.Stop();
-                    }catch(Exception ex)
+                    }
+                    catch (Exception ex)
                     {
                         this.SendSMS("error", ex.Message);
                     }
-                    
+
                 }
-            else
-            {
-                //MessageBox.Show(clientdata.errorMessage);
-                this.SendSMS("error", clientdata.errorMessage);
-            }
+                else
+                {
+                    //MessageBox.Show(clientdata.errorMessage);
+                    this.SendSMS("error", clientdata.errorMessage);
+                }
                 e.Result = eventTable;
             }
 
-            
-            
+
+
             //throw new NotImplementedException();
         }
         Random err = new Random(10);

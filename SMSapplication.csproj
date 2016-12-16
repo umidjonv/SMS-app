@@ -70,7 +70,7 @@
   <ItemGroup>
     <Reference Include="MaskedCell, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\umidjon.vakhidov\Documents\Visual Studio 2012\Projects\MaskedCell\MaskedCell\bin\Debug\MaskedCell.dll</HintPath>
+      <HintPath>bin\x86\Debug\MaskedCell.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />

@@ -37,35 +37,29 @@ namespace SMSapplication
 
             
             this.AppSettings = new Settings();
-            if (!this.AppSettings.LoadSettings())
-            { this.isexit = true; Application.Exit(); }
+            //if (!this.AppSettings.LoadSettings())
+            //{ this.isexit = true; Application.Exit(); }
             try
             {
-                //System.Diagnostics.Process proc = System.Diagnostics.Process.GetProcesses();
-                //Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-                string path = Path.GetDirectoryName(Application.ExecutablePath);
-                //MessageBox.Show("Saved settings");
-                this.clientsTableAdapter.Connection.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path + "\\localDB.mdb";
-                this.eeventLogTableAdapter.Connection.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path + "\\localDB.mdb";
+                #region Database load place (not active)
+                //string path = Path.GetDirectoryName(Application.ExecutablePath);
+                
+                //this.clientsTableAdapter.Connection.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path + "\\localDB.mdb";
+                //this.eeventLogTableAdapter.Connection.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path + "\\localDB.mdb";
 
 
-                this.clientsTableAdapter.Fill(this.localDBDataSet.Clients);
-                this.eeventLogTableAdapter.Fill(this.localDBDataSet.EeventLog);
-                foreach (localDBDataSet.EeventLogRow row in localDBDataSet.EeventLog.Select("Status='Ошибка'"))
-                {
-                    this.dgvEvent.Rows.Add(new object[] { row.ClBdg, row.PhoneNumber, row.ClientName, row.EventTime, row.Status, row.EventText });
-                    rtbEvents.Text += (row.EventlogID + "=>   " + row.ClientName + "=>   Текст(" + row.EventText + ")=>   " + row.EventTime + "=>   " + row.PhoneNumber + "=>   " + row.Status).Replace("\r\n", "") + "\r\n";
-                }
-                //MessageBox.Show("clients");
-                //dgvEmployees.DataSource = this.localDBDataSet.Clients;
-                // TODO: данная строка кода позволяет загрузить данные в таблицу "localDBDataSet.EeventLog". При необходимости она может быть перемещена или удалена.
-                //this.eeventLogTableAdapter.Adapter.SelectCommand =new System.Data.OleDb.OleDbCommand("select * from EeventLog where EventTime=\""+DateTime.Now.AddHours((double)-tbPrevEvents.Value).ToString()+"\"");
-                //this.eeventLogTableAdapter.Adapter.SelectCommand.Parameters[0].Value = DateTime.Now.AddHours((double)-tbPrevEvents.Value);
+                //this.clientsTableAdapter.Fill(this.localDBDataSet.Clients);
+                //this.eeventLogTableAdapter.Fill(this.localDBDataSet.EeventLog);
+                //foreach (localDBDataSet.EeventLogRow row in localDBDataSet.EeventLog.Select("Status='Ошибка'"))
+                //{
+                //    this.dgvEvent.Rows.Add(new object[] { row.ClBdg, row.PhoneNumber, row.ClientName, row.EventTime, row.Status, row.EventText });
+                //    rtbEvents.Text += (row.EventlogID + "=>   " + row.ClientName + "=>   Текст(" + row.EventText + ")=>   " + row.EventTime + "=>   " + row.PhoneNumber + "=>   " + row.Status).Replace("\r\n", "") + "\r\n";
+                //}
+                
+                //System.Data.OleDb.OleDbDataAdapter adapter = new System.Data.OleDb.OleDbDataAdapter("select * from EeventLog where EventTime>CDate(\"" + DateTime.Now.AddHours((double)-tbPrevEvents.Value).ToString() + "\") ", this.eeventLogTableAdapter.Connection);
 
-                System.Data.OleDb.OleDbDataAdapter adapter = new System.Data.OleDb.OleDbDataAdapter("select * from EeventLog where EventTime>CDate(\"" + DateTime.Now.AddHours((double)-tbPrevEvents.Value).ToString() + "\") ", this.eeventLogTableAdapter.Connection);
-
-                adapter.Fill((DataTable)this.localDBDataSet.EeventLog);
-                //MessageBox.Show("Filled eventlog");
+                //adapter.Fill((DataTable)this.localDBDataSet.EeventLog);
+                #endregion
                 //load settings
 
                 this.senderSMS.dgv = dgvEvent;
@@ -113,7 +107,7 @@ namespace SMSapplication
                 {
                     
                     this.senderSMS.objectSMS = this.objclsSMS;
-                    SMSapplication_FormClosing(this, new FormClosingEventArgs(CloseReason.FormOwnerClosing, false));
+                    //SMSapplication_FormClosing(this, new FormClosingEventArgs(CloseReason.FormOwnerClosing, false));
                 }
 
                 //Remove tab pages

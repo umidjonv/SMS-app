@@ -1,0 +1,8 @@
+ClientDB:
+organization:
+CheckInterval:20
+ErrorInterval:10
+beginDate:16.12.2016 14:30:31
+PrevEventsInterval:1
+OtmetkaProxod:
+port:
